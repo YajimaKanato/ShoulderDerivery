@@ -93,92 +93,132 @@ public partial class @Actions: IInputActionCollection2, IDisposable
             ""id"": ""e3239f42-2f0b-4aa8-b7ad-acac7380561e"",
             ""actions"": [
                 {
-                    ""name"": ""Move"",
+                    ""name"": ""Steer"",
                     ""type"": ""Value"",
-                    ""id"": ""a3fcd80f-f358-4bbb-bc82-6c076e1743cb"",
-                    ""expectedControlType"": ""Vector2"",
+                    ""id"": ""913ab107-0b8f-4241-8d25-242861332471"",
+                    ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Accel"",
+                    ""type"": ""Button"",
+                    ""id"": ""883c4c12-672e-40bc-896e-9494c339a466"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Brake"",
+                    ""type"": ""Button"",
+                    ""id"": ""f1e83a3c-0101-4700-b1aa-371fcc870d75"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""54710bf8-6ded-48d5-a362-fe11a23ad5ad"",
-                    ""path"": ""<Gamepad>/leftStick"",
+                    ""id"": ""e1153115-8d30-4477-9fc5-a24a64946d31"",
+                    ""path"": ""<Gamepad>/dpad/x"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Move"",
+                    ""action"": ""Steer"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""0c2bb511-376a-428c-b7cc-9c80a233229d"",
-                    ""path"": ""<Gamepad>/dpad"",
+                    ""id"": ""01dcd827-9c2e-493d-9ce9-1ac3f57329f1"",
+                    ""path"": ""<Gamepad>/leftStick/x"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Move"",
+                    ""action"": ""Steer"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""2D Vector"",
-                    ""id"": ""c0b31d1b-14c2-41f2-9f7a-fe7a2f45c0fb"",
-                    ""path"": ""2DVector"",
+                    ""name"": ""1D Axis"",
+                    ""id"": ""481efea9-5663-4d55-9a32-e62f27a16301"",
+                    ""path"": ""1DAxis"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Move"",
+                    ""action"": ""Steer"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""up"",
-                    ""id"": ""6fed13de-7667-411d-aace-8e3ec76621f0"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""01f4ea95-8f47-40d2-a020-686296671cf2"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""25beb7f1-f435-4790-a7ca-5e28b4b0a96a"",
+                    ""name"": ""negative"",
+                    ""id"": ""6c7ac8c1-8668-481d-be24-26df1db4f582"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Move"",
+                    ""action"": ""Steer"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""right"",
-                    ""id"": ""a86d1d17-7b90-45d3-b9f5-f552bd5ca627"",
+                    ""name"": ""positive"",
+                    ""id"": ""65ee739c-9ff1-4126-b363-498570ce0c79"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Move"",
+                    ""action"": ""Steer"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5a9a32b8-7452-4572-843e-5f81fe8946b0"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Accel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ebdb92f7-f649-4bfe-8ef0-fe7e4638628a"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Accel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f72bb383-1339-4d91-bb98-76b8acab8338"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Brake"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""75e16d17-5f45-4993-90ec-0a9d6c7b4a0e"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Brake"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -187,7 +227,9 @@ public partial class @Actions: IInputActionCollection2, IDisposable
 }");
         // Ingame
         m_Ingame = asset.FindActionMap("Ingame", throwIfNotFound: true);
-        m_Ingame_Move = m_Ingame.FindAction("Move", throwIfNotFound: true);
+        m_Ingame_Steer = m_Ingame.FindAction("Steer", throwIfNotFound: true);
+        m_Ingame_Accel = m_Ingame.FindAction("Accel", throwIfNotFound: true);
+        m_Ingame_Brake = m_Ingame.FindAction("Brake", throwIfNotFound: true);
     }
 
     ~@Actions()
@@ -268,7 +310,9 @@ public partial class @Actions: IInputActionCollection2, IDisposable
     // Ingame
     private readonly InputActionMap m_Ingame;
     private List<IIngameActions> m_IngameActionsCallbackInterfaces = new List<IIngameActions>();
-    private readonly InputAction m_Ingame_Move;
+    private readonly InputAction m_Ingame_Steer;
+    private readonly InputAction m_Ingame_Accel;
+    private readonly InputAction m_Ingame_Brake;
     /// <summary>
     /// Provides access to input actions defined in input action map "Ingame".
     /// </summary>
@@ -281,9 +325,17 @@ public partial class @Actions: IInputActionCollection2, IDisposable
         /// </summary>
         public IngameActions(@Actions wrapper) { m_Wrapper = wrapper; }
         /// <summary>
-        /// Provides access to the underlying input action "Ingame/Move".
+        /// Provides access to the underlying input action "Ingame/Steer".
         /// </summary>
-        public InputAction @Move => m_Wrapper.m_Ingame_Move;
+        public InputAction @Steer => m_Wrapper.m_Ingame_Steer;
+        /// <summary>
+        /// Provides access to the underlying input action "Ingame/Accel".
+        /// </summary>
+        public InputAction @Accel => m_Wrapper.m_Ingame_Accel;
+        /// <summary>
+        /// Provides access to the underlying input action "Ingame/Brake".
+        /// </summary>
+        public InputAction @Brake => m_Wrapper.m_Ingame_Brake;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -310,9 +362,15 @@ public partial class @Actions: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_IngameActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_IngameActionsCallbackInterfaces.Add(instance);
-            @Move.started += instance.OnMove;
-            @Move.performed += instance.OnMove;
-            @Move.canceled += instance.OnMove;
+            @Steer.started += instance.OnSteer;
+            @Steer.performed += instance.OnSteer;
+            @Steer.canceled += instance.OnSteer;
+            @Accel.started += instance.OnAccel;
+            @Accel.performed += instance.OnAccel;
+            @Accel.canceled += instance.OnAccel;
+            @Brake.started += instance.OnBrake;
+            @Brake.performed += instance.OnBrake;
+            @Brake.canceled += instance.OnBrake;
         }
 
         /// <summary>
@@ -324,9 +382,15 @@ public partial class @Actions: IInputActionCollection2, IDisposable
         /// <seealso cref="IngameActions" />
         private void UnregisterCallbacks(IIngameActions instance)
         {
-            @Move.started -= instance.OnMove;
-            @Move.performed -= instance.OnMove;
-            @Move.canceled -= instance.OnMove;
+            @Steer.started -= instance.OnSteer;
+            @Steer.performed -= instance.OnSteer;
+            @Steer.canceled -= instance.OnSteer;
+            @Accel.started -= instance.OnAccel;
+            @Accel.performed -= instance.OnAccel;
+            @Accel.canceled -= instance.OnAccel;
+            @Brake.started -= instance.OnBrake;
+            @Brake.performed -= instance.OnBrake;
+            @Brake.canceled -= instance.OnBrake;
         }
 
         /// <summary>
@@ -368,11 +432,25 @@ public partial class @Actions: IInputActionCollection2, IDisposable
     public interface IIngameActions
     {
         /// <summary>
-        /// Method invoked when associated input action "Move" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "Steer" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnMove(InputAction.CallbackContext context);
+        void OnSteer(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Accel" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnAccel(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Brake" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnBrake(InputAction.CallbackContext context);
     }
 }
