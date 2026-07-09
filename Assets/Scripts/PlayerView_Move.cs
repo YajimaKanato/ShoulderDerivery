@@ -9,9 +9,10 @@ public partial class PlayerView
     [Header("後輪"), SerializeField] WheelCollider _realWheel;
     [Header("後輪にかかるモーターの強さ"), SerializeField] float _motorPower = 1000;
     [SerializeField] PlayerMoveParam _moveParam;
-    [Space(10), Header("車体に関するデータ")]
+    [Header("車体に関するデータ")]
     [Header("車体の傾き角度"), SerializeField] float _maxVehicleAngle = 30;
-    [Header("右左折時の車体の傾き"), SerializeField] Transform _pivot;
+    [Header("ハンドルオブジェクト"), SerializeField] Transform _handleTransform;
+    [Header("車体の傾きの中心"), SerializeField] Transform _pivot;
     float _accelDelta;
     float _brakeDelta;
     float _rightSteerDelta;
@@ -22,7 +23,6 @@ public partial class PlayerView
         var accel = _accel.IsPressed() ? 1 : 0;
         var brake = _brake.IsPressed() ? 1 : 0;
         var speed = GetVelocity(accel, brake);
-        Debug.Log(speed);
         _realWheel.motorTorque = speed * _motorPower;
     }
 
@@ -36,7 +36,8 @@ public partial class PlayerView
         var steer = _steer.ReadValue<float>();
         var steerAngle = GetSteerAngle(Mathf.Clamp01(steer), Mathf.Clamp01(-steer));
         _frontWheel.steerAngle = steerAngle * _maxSteerAngle;
-        _pivot.localRotation = Quaternion.Euler(0, 0, -steerAngle * _maxVehicleAngle);
+        _handleTransform.localEulerAngles = new Vector3(_handleTransform.eulerAngles.x, steerAngle * _maxSteerAngle, 0);
+        _pivot.localEulerAngles = new Vector3(0, steerAngle * _maxVehicleAngle, 0);
     }
 
     float GetSteerAngle(float right, float left)

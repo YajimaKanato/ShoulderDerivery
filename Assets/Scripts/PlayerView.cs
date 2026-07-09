@@ -18,7 +18,8 @@ public partial class PlayerView : MonoBehaviour
     {
         Move();
         Steer();
-        
+        ShakeAndNod();
+        Throw();
     }
 
     private void FixedUpdate()

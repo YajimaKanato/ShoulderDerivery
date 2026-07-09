@@ -32,6 +32,8 @@ public class PlayerMoveParam
             }
         }
 
+        delta = Mathf.Clamp01(delta);
+
         return _speedCurve.Evaluate(delta);
     }
 }
