@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6655996856650245115}
   - component: {fileID: 6789921586840525936}
   - component: {fileID: 5105280724077163550}
-  - component: {fileID: 1033767491591172841}
+  - component: {fileID: 2584622776257809225}
   m_Layer: 0
   m_Name: Tube
   m_TagString: Untagged
@@ -119,14 +119,14 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &1033767491591172841
-MeshCollider:
+--- !u!136 &2584622776257809225
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4351745658895083640}
-  m_Material: {fileID: 13400000, guid: 48226cec054ec914d84d52087144f2ce, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -137,7 +137,8 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -309684176625119091, guid: e45be126a51afea479542063f06866f0, type: 3}
+  serializedVersion: 2
+  m_Radius: 0.12249148
+  m_Height: 1.1307454
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: -0.00000059604645}
