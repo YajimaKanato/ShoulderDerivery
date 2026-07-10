@@ -6,6 +6,7 @@ public partial class PlayerView : MonoBehaviour
     void Init()
     {
         CacheAction();
+        ThrowInit();
     }
 
     private void Awake()
@@ -20,6 +21,7 @@ public partial class PlayerView : MonoBehaviour
         Steer();
         ShakeAndNod();
         Throw();
+        LockOn();
     }
 
     private void FixedUpdate()
