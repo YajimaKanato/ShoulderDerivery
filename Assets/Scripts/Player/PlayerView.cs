@@ -2,9 +2,11 @@ using UnityEngine;
 
 public partial class PlayerView : MonoBehaviour
 {
+    Rigidbody _rb;
 
     void Init()
     {
+        _rb = GetComponent<Rigidbody>();
         CacheAction();
         ThrowInit();
     }
@@ -17,8 +19,6 @@ public partial class PlayerView : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
-        Steer();
         ShakeAndNod();
         Throw();
         LockOn();
@@ -26,5 +26,8 @@ public partial class PlayerView : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Move();
+        Steer();
+        CalculateDirection();
     }
 }

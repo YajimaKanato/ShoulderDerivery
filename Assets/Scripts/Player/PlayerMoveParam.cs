@@ -6,12 +6,12 @@ public class PlayerMoveParam
 {
     [Header("パラメータの変化"), SerializeField] AnimationCurve _speedCurve;
     [Header("最大入力時に最大パラメータに到達するまでの時間"), SerializeField] float _maxSpeedDuration = 1;
-    [Header("入力がないときの減衰率"), SerializeField] float _damping = 2;
-    const float INPUT_VALID_RANGE = 0.01f;
+    [Header("入力がないときの減衰率"), SerializeField] float _damping = 0.5f;
+    const float INPUT_VALID_RANGE = 0.001f;
 
     public float CalculateDelta(float input, ref float delta)
     {
-        if (input != 0 && delta < 1)
+        if (input != 0 && delta <= Mathf.Abs(input))
         {
             // 入力量に対する最大速度でないなら
             // 入力方向に数値を増やす
@@ -32,7 +32,7 @@ public class PlayerMoveParam
             }
         }
 
-        delta = Mathf.Clamp01(delta);
+        delta = Mathf.Clamp(delta, 0, Mathf.Max(Mathf.Abs(input), delta));
 
         return _speedCurve.Evaluate(delta);
     }
