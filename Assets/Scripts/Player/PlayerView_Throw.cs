@@ -4,7 +4,6 @@ public partial class PlayerView
 {
     [Header("投擲関連のパラメータ")]
     [Header("投擲力"), SerializeField] float _throwingPower = 10;
-    [Header("投擲物"), SerializeField] GameObject _cardboard;
     [Header("投擲開始位置"), SerializeField] Transform _throwPos;
     [Header("投擲の予測線"), SerializeField] GuideLineRenderer _guideLineRenderer;
     [Header("予測線の長さ"), SerializeField] int _guideLineLength = 50;

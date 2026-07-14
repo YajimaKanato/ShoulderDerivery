@@ -43,11 +43,11 @@ public partial class PlayerView
         _rb.MoveRotation(newRot);
 
         // 曲がってる感じを出す
-        _vehicle.localEulerAngles = new Vector3(0, 0, -steer * _maxSteerAngle * speed);
+        _vehicle.localEulerAngles = new Vector3(0, 0, -steer * _maxVehicleAngle * speed);
         var handle = _handleTransform.localEulerAngles;
         handle.y = steer * _maxSteerAngle * speed;
         _handleTransform.localEulerAngles = handle;
-        _pivot.localEulerAngles = new Vector3(0, steer * _maxVehicleAngle * speed, -steer * _maxSteerAngle * speed);
+        _pivot.localEulerAngles = new Vector3(0, steer * _maxVehicleAngle * speed, -steer * _maxVehicleAngle * speed);
     }
 
     /// <summary>
