@@ -37,7 +37,7 @@ public class Cardboard : MonoBehaviour
         }
     }
 
-    void ReleaseToPool()
+    public void ReleaseToPool()
     {
         _isReady = false;
         _parentPool.ReleaseToPool(this);
