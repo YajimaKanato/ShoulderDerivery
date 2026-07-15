@@ -21,17 +21,22 @@ public class Target : MonoBehaviour
         Debug.Log("配達してぇ", gameObject);
     }
 
+    public void CompleteDerivery()
+    {
+        _requested = false;
+        _targetPin.gameObject.SetActive(_requested);
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (!_requested) return;
         if (collision.gameObject.CompareTag("Cardboard")
             && collision.gameObject.TryGetComponent<Cardboard>(out var cardboard))
         {
+            cardboard.ReleaseToPool();
+            CompleteDerivery();
             Debug.Log("配達ありがとぉ");
             _manager.NextDerivery();
-            cardboard.ReleaseToPool();
-            _requested = false;
-            _targetPin.gameObject.SetActive(_requested);
         }
     }
 }
