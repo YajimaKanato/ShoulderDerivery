@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8765927582745018441}
   m_Layer: 0
   m_Name: Box 4
-  m_TagString: Untagged
+  m_TagString: Cardboard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
