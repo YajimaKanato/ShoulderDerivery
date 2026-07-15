@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Cardboard : MonoBehaviour
 {
+    [SerializeField] CardboardModel _cardboardModel;
     [Header("生存時間"), SerializeField] float _lifeTime = 5f;
     Rigidbody _rb;
     TrailRenderer _trailRender;
